@@ -23,13 +23,13 @@ class AppColors {
 // Define text styles using Google Fonts
 class AppTextStyles {
   static TextStyle headline1 = GoogleFonts.lato(
-    fontSize: 96.0,
+    fontSize: 40.0,
     fontWeight: FontWeight.w300,
     letterSpacing: -1.5,
     color: AppColors.onBackgroundLight,
   );
   static TextStyle headline2 = GoogleFonts.lato(
-    fontSize: 60.0,
+    fontSize: 30.0,
     fontWeight: FontWeight.w300,
     letterSpacing: -0.5,
     color: AppColors.onBackgroundLight,

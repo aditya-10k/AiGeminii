@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:geminii/providers/chatprovider.dart';
 import 'package:geminii/screen/homescreen.dart';
 import 'package:geminii/workingcomps/themes.dart';
+import 'package:provider/provider.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async{
+
+    WidgetsFlutterBinding.ensureInitialized();
+    await Chatprovider.initHive();
+
+    runApp(
+     
+        ChangeNotifierProvider(create: (context) => Chatprovider(),child: MyApp()),
+      );
+  
 }
 
 class MyApp extends StatelessWidget {
@@ -21,6 +31,7 @@ class MyApp extends StatelessWidget {
       theme: lightTheme(context),
       darkTheme: darkTheme(context),
       themeMode: ThemeMode.dark,
+      //themeMode: ThemeMode.light,
       home: Homescreen(),
       );
   }

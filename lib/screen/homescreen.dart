@@ -19,7 +19,7 @@ Chathistory(),
 
 ];
 
-int currentindex = 1;
+int currentindex = 0;
 
 final PageController _controller = PageController(initialPage: 0);
 
